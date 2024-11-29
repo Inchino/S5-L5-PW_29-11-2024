@@ -39,7 +39,7 @@ nav {
 }
 
 img {
-  margin-right: 700px;
+  margin-right: 45vw;
 }
 
 ul li {
@@ -108,14 +108,13 @@ span img {
   margin-right: 10px;
 }
 
-article {
+article, .colonna{
   margin-left: 100px;
 }
 
 .articoli {
   display: flex;
   flex-wrap: wrap;
-  height: 30vh;
 }
 
 #articolo1,
@@ -178,21 +177,9 @@ hr {
   margin: 50px 0 50px;
 }
 
-#section2 {
-  display: flex;
-  height: 100vh;
-  margin-left: 100px;
-}
-
-.colonna {
-  flex-basis: 67%;
-}
-
-aside {
-  flex-basis: 33%;
-  position: sticky;
-  left: 0;
-  z-index: 10; /*non lo prendeee*/
+aside{
+  float: right;
+  margin-right: 100px;
 }
 
 #articoloColonna1,
@@ -240,6 +227,7 @@ aside {
 #immagine img {
   width: 250px;
   padding-left: 30px;
+  margin: 0;
 }
 
 .contenitore {
@@ -272,4 +260,38 @@ aside {
 
 #libro{
   width: 25px;
+}
+
+@media screen and (max-width: 767px){
+
+  .intestazione h2{
+    margin: 0 0 10px;
+  }
+
+  img{
+    margin-right: 0;
+  }
+
+  nav{
+    margin-left:0;
+  }
+
+  aside{
+    float: none;
+    margin: 0 0 50px 100px;
+
+  }
+  
+}
+
+@media screen and (max-width: 575px){
+
+  nav button{
+    padding: 5px 30px 5px 30px;
+    vertical-align: middle;
+  }
+
+  article, .colonna{
+    margin-left: 10px;
+  }
 }
